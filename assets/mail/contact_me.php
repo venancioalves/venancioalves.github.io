@@ -13,8 +13,8 @@ $message = strip_tags(htmlspecialchars($_POST['message']));
 // Create the email and send the message
 $to = "venaciobsn@gmail.com"; // Add your email address in between the "" replacing yourname@yourdomain.com - This is where the form will send a message to.
 $subject = "Estava em seu site e entrei em contato:  $name";
-$body = "You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\nEmail: $email\n\nPhone: $phone\n\nMessage:\n$message";
-$header = "venancio@mandacarucommerce.com.br\n"; // This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com.
+$body = "Você esta recebendo esse email pois estive no seu site e preenchi o formulario de contato.\n\n"."Mais detalhes:\n\nNome: $name\n\nEmail: $email\n\nTelefone: $phone\n\nMensagem:\n$message";
+$header = "contato@mandacarucommerce.com.br\n"; // This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com.
 $header .= "Reply-To: $email";	
 
 if(!mail($to, $subject, $body, $header))
